@@ -12,19 +12,31 @@ public class GondolatOlvaso {
 
     }
 
-    private static int[] Kirak() {
-        int[] tomb = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21};
-        for (int szamlalo = 0; szamlalo < tomb.length; szamlalo++) {
-
+    private static String[] Kirak() {
+        String[] pakli = {""};
+        String[] szinek = {"P", "T", "Z", "M"};
+        String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
+        
+            int index = 0;
+            for (int szin = 0; szin < szinek.length; szin++) {
+                for (int ertek = 0; ertek < ertekek.length; ertek++) {
+                    while (index < 20) {
+                        pakli[index]+= szinek[szin]+ertekek[ertek];
+                        index+=1;
+                    }
+                }
+            }
+            
+        for (int szamlalo = 0; szamlalo < pakli.length; szamlalo++) {
             if (szamlalo % 3 == 0) {
                 System.out.println("");
-                System.out.print(tomb[szamlalo] + " ");
+                System.out.print(pakli[szamlalo] + " ");
             } else {
-                System.out.print(tomb[szamlalo] + " ");
+                System.out.print(pakli[szamlalo] + " ");
             }
 
-        }
-        return tomb;
+        }          
+        return pakli;
     }
 
     private static void Melyik() {
