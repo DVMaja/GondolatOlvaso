@@ -13,29 +13,38 @@ public class GondolatOlvaso {
     }
 
     private static String[] Kirak() {
-        String[] pakli = {""};
+        String[] pakli = new String[21];
         String[] szinek = {"P", "T", "Z", "M"};
         String[] ertekek = {"Ász", "Kir", "Fel", "X", "IX", "VIII"};
-        
-            int index = 0;
-            for (int szin = 0; szin < szinek.length; szin++) {
-                for (int ertek = 0; ertek < ertekek.length; ertek++) {
-                    while (index < 20) {
-                        pakli[index]+= szinek[szin]+ertekek[ertek];
-                        index+=1;
-                    }
-                }
+
+        int index = 0;
+        for (int szin = 0; szin < szinek.length; szin++) {
+            for (int ertek = 0; ertek < ertekek.length-1; ertek++) {
+                
+                    pakli[index] = szinek[szin] + "_" + ertekek[ertek] + " ";
+                    index += 1;
+                
+
+                
             }
-            
+        }
+//        int index1 = 1;
+//        for (String szin : szinek) {
+//            for (int i = 0; i < szinek; i++) {
+//                
+//            }
+//        }
+
         for (int szamlalo = 0; szamlalo < pakli.length; szamlalo++) {
             if (szamlalo % 3 == 0) {
                 System.out.println("");
-                System.out.print(pakli[szamlalo] + " ");
+                System.out.print(pakli[szamlalo]);
             } else {
-                System.out.print(pakli[szamlalo] + " ");
+                System.out.print(pakli[szamlalo]);
             }
 
-        }          
+        }
+
         return pakli;
     }
 
