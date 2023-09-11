@@ -1,4 +1,3 @@
-
 package gondolatolvaso;
 
 import java.util.Scanner;
@@ -30,7 +29,7 @@ public class GondolatOlvaso {
                 System.out.println(" ");
                 System.out.printf("%-8s", pakli[szamlalo]);
             } else {
-                System.out.print(pakli[szamlalo]);
+                System.out.printf("%-8s", pakli[szamlalo]);
             }
         }          
         return pakli;
