@@ -19,15 +19,13 @@ public class GondolatOlvaso {
 
         int index = 0;
         for (int szin = 0; szin < szinek.length; szin++) {
-            for (int ertek = 0; ertek < ertekek.length-1; ertek++) {
-                
-                    pakli[index] = szinek[szin] + "_" + ertekek[ertek] + " ";
-                    index += 1;
-                
+            for (int ertek = 0; ertek < ertekek.length - 1; ertek++) {
 
-                
+                pakli[index] = szinek[szin] + "_" + ertekek[ertek] + " ";
+                index += 1;
             }
         }
+
 //        int index1 = 1;
 //        for (String szin : szinek) {
 //            for (int i = 0; i < szinek; i++) {
@@ -36,16 +34,16 @@ public class GondolatOlvaso {
 //        }
 
         for (int szamlalo = 0; szamlalo < pakli.length; szamlalo++) {
+            String lap = pakli[szamlalo];
             if (szamlalo % 3 == 0) {
                 System.out.println("");
-                System.out.print(pakli[szamlalo]);
+                System.out.printf("%-8s",lap);
             } else {
-                System.out.print(pakli[szamlalo]);
+                System.out.printf("%-8s",lap);
             }
-
         }
-
-        return pakli;
+        //Megjelenit(pa);
+        return pakli;        
     }
 
     private static void Melyik() {
@@ -62,5 +60,16 @@ public class GondolatOlvaso {
         boolean ezVolt = false;
         return ezVolt;
     }
+
+//    private static void Megjelenit() {
+//        for (int szamlalo = 0; szamlalo < pakli.length; szamlalo++) {
+//            if (szamlalo % 3 == 0) {
+//                System.out.println("");
+//                System.out.print(pakli[szamlalo]);
+//            } else {
+//                System.out.print(pakli[szamlalo]);
+//            }
+//        }
+//    }
 
 }
