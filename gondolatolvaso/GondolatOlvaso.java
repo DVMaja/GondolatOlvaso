@@ -9,7 +9,6 @@ public class GondolatOlvaso {
         Melyik();
         Kever();
         EzVolt();
-
     }
 
     private static String[] Kirak() {
@@ -20,7 +19,6 @@ public class GondolatOlvaso {
         int index = 0;
         for (int szin = 0; szin < szinek.length; szin++) {
             for (int ertek = 0; ertek < ertekek.length - 1; ertek++) {
-
                 pakli[index] = szinek[szin] + "_" + ertekek[ertek] + " ";
                 index += 1;
             }
@@ -32,24 +30,29 @@ public class GondolatOlvaso {
 //                
 //            }
 //        }
-
         for (int szamlalo = 0; szamlalo < pakli.length; szamlalo++) {
             String lap = pakli[szamlalo];
             if (szamlalo % 3 == 0) {
                 System.out.println("");
-                System.out.printf("%-8s",lap);
+                System.out.printf("%-8s", lap);
             } else {
-                System.out.printf("%-8s",lap);
+                System.out.printf("%-8s", lap);
             }
         }
-        //Megjelenit(pa);
-        return pakli;        
+        return pakli;
     }
 
     private static void Melyik() {
-        System.out.println("");
-        System.out.println("Kérem adja meg melyik oszlopot választja");
         Scanner sc = new Scanner(System.in);
+        System.out.println("");
+        
+        boolean jo;
+        do {
+            System.out.println("Kérem adja meg melyik oszlopot választja(1-3): ");
+            int oszlop = sc.nextInt();
+            jo = oszlop >= 1 && oszlop <= 3;
+        } while (!jo);
+
     }
 
     private static void Kever() {
@@ -71,5 +74,4 @@ public class GondolatOlvaso {
 //            }
 //        }
 //    }
-
 }
